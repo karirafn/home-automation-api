@@ -1,9 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Zaptec
 {
@@ -11,6 +6,10 @@ namespace Zaptec
     [Route("api/[controller]")]
     public class ZaptecController : ControllerBase
     {
-
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetChargeHistory(Guid id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

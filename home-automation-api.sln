@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zaptec", "Zaptec\Zaptec.csproj", "{6AA23233-CC1D-48BB-8D3A-C259B2A64C30}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D677FB06-C767-4C88-95C7-ABE545C514C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EF816CC-FCF0-4A7B-B915-257129716056} = {D677FB06-C767-4C88-95C7-ABE545C514C0}
+		{6AA23233-CC1D-48BB-8D3A-C259B2A64C30} = {D677FB06-C767-4C88-95C7-ABE545C514C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79DB1FA2-45B2-436C-8099-2735ECAA64CC}

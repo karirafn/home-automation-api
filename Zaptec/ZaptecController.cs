@@ -1,16 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.Http;
 
-namespace Zaptec
+namespace Zaptec;
+
+[ApiController]
+[Route("api/[controller]")]
+public class ZaptecController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ZaptecController : ControllerBase
-    {
+    private readonly HttpClient _http;
 
+    public ZaptecController(IHttpClientFactory httpClientFactory)
+    {
+        _http = httpClientFactory.CreateClient(nameof(Zaptec));
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetChargeHistory(Guid id)
+    {
+        throw new NotImplementedException();
     }
 }

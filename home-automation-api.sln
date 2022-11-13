@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{2EF816CC-FCF0-4A7B-B915-257129716056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{2EF816CC-FCF0-4A7B-B915-257129716056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zaptec", "Zaptec\Zaptec.csproj", "{6AA23233-CC1D-48BB-8D3A-C259B2A64C30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zaptec", "Zaptec\Zaptec.csproj", "{6AA23233-CC1D-48BB-8D3A-C259B2A64C30}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D677FB06-C767-4C88-95C7-ABE545C514C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{5CE908E2-965E-44B2-AB65-1BF703AFE6D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{6AA23233-CC1D-48BB-8D3A-C259B2A64C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AA23233-CC1D-48BB-8D3A-C259B2A64C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AA23233-CC1D-48BB-8D3A-C259B2A64C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CE908E2-965E-44B2-AB65-1BF703AFE6D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE908E2-965E-44B2-AB65-1BF703AFE6D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE908E2-965E-44B2-AB65-1BF703AFE6D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE908E2-965E-44B2-AB65-1BF703AFE6D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2EF816CC-FCF0-4A7B-B915-257129716056} = {D677FB06-C767-4C88-95C7-ABE545C514C0}
 		{6AA23233-CC1D-48BB-8D3A-C259B2A64C30} = {D677FB06-C767-4C88-95C7-ABE545C514C0}
+		{5CE908E2-965E-44B2-AB65-1BF703AFE6D9} = {D677FB06-C767-4C88-95C7-ABE545C514C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79DB1FA2-45B2-436C-8099-2735ECAA64CC}

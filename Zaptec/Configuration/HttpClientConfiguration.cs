@@ -10,8 +10,8 @@ internal static class HttpClientConfiguration
         {
             options.BaseAddress = new Uri("https://api.zaptec.com/");
 
-            options.DefaultRequestHeaders.Accept.Clear();
-            options.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+            //options.DefaultRequestHeaders.Accept.Clear();
+            //options.DefaultRequestHeaders.Accept.Add(
+            //    new MediaTypeWithQualityHeaderValue("application/json"));
         }).Services;
 }

@@ -7,4 +7,3 @@
             int Revision,
             int MajorRevision,
             int MinorRevision);
-}

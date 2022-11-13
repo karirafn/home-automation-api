@@ -1,4 +1,3 @@
 ﻿namespace Zaptec.Models;
 
-    public record ChargeHistory(int Pages, IEnumerable<ChargeData> Data);
-}
+public record ChargeHistory(int Pages, IEnumerable<ChargeData> Data);

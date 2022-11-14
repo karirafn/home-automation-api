@@ -11,5 +11,6 @@ public record ChargeData(
     Guid ChargerId,
     string DeviceName,
     bool ExternallyEnded,
+    IEnumerable<EnergyDetail> EnergyDetails,
     ChargerFirmwareVersion ChargerFirmwareVersion,
     string SignedSession);

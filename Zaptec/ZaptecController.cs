@@ -21,7 +21,7 @@ public class ZaptecController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Login(LoginRequest request, CancellationToken cancellationToken)
     {
-        var response = await _mediator.Send(request, cancellationToken);
+        LoginResponse? response = await _mediator.Send(request, cancellationToken);
 
         return response.AccessToken is not null ? Ok(response) : BadRequest(request);
     }
@@ -29,7 +29,7 @@ public class ZaptecController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> GetChargeHistory(GetChargeHistoryRequest request, CancellationToken cancellationToken)
     {
-        var response = await _mediator.Send(request, cancellationToken);
+        GetChargeHistoryResponse? response = await _mediator.Send(request, cancellationToken);
 
         return response is not null ? Ok(response) : BadRequest(request);
     }

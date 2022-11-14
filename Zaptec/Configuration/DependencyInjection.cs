@@ -1,5 +1,6 @@
 ﻿
 using Common.Configuration;
+
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Zaptec.Configuration;

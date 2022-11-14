@@ -1,4 +1,4 @@
-using Zaptec.Configuration;
+﻿using Zaptec.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 

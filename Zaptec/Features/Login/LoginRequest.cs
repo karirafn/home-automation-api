@@ -1,2 +1,5 @@
-﻿namespace Zaptec.Features.Login;
-public record LoginRequest(string username, string password);
+﻿using MediatR;
+
+namespace Zaptec.Features.Login;
+
+public record LoginRequest(string Username, string Password) : IRequest<LoginResponse>;

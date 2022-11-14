@@ -1,6 +1,4 @@
-﻿using System.Net.Http.Json;
-using System.Text;
-using System.Web;
+﻿using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,33 +10,18 @@ namespace Zaptec;
 [Route("api/[controller]")]
 public class ZaptecController : ControllerBase
 {
-    private readonly HttpClient _http;
-    private string _token = string.Empty;
+    private readonly IMediator _mediator;
 
-    public ZaptecController(IHttpClientFactory httpClientFactory)
+    public ZaptecController(IMediator mediator)
     {
-        _http = httpClientFactory.CreateClient(nameof(Zaptec));
+        _mediator = mediator;
     }
 
     [HttpPost]
-    public async Task<IActionResult> Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request, CancellationToken cancellationToken)
     {
-        string username = HttpUtility.UrlEncode(request.username);
-        string password = HttpUtility.UrlEncode(request.password);
-        StringContent content = new(
-            $"grant_type=password&username={username}&password={password}",
-            Encoding.UTF8,
-            "application/x-www-form-urlencoded");
-        HttpResponseMessage response = await _http.PostAsync("oauth/token", content);
-        LoginResponse? result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+        var response = await _mediator.Send(request, cancellationToken);
 
-        if (result is null)
-        {
-            return BadRequest();
-        }
-
-        _token = result.access_token;
-
-        return Ok(result);
+        return response.AccessToken is not null ? Ok(response) : BadRequest();
     }
 }

@@ -2,7 +2,7 @@
 
 public record ChargeData(
     Guid Id,
-    String DeviceId,
+    string DeviceId,
     DateTime StartDateTime,
     DateTime EndDateTime,
     double Energy,

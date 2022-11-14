@@ -22,7 +22,7 @@ public class LoginHandler : IRequestHandler<LoginRequest, LoginResponse?>
 
         StringContent content = new(
             $"grant_type=password&username={username}&password={password}",
-        Encoding.UTF8,
+            Encoding.UTF8,
             "application/x-www-form-urlencoded");
 
         HttpResponseMessage responseMessage = await _http.PostAsync("oauth/token", content, cancellationToken);

@@ -8,7 +8,7 @@ using Zaptec.Features.Login;
 namespace Zaptec;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 public class ZaptecController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -27,7 +27,7 @@ public class ZaptecController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> GetChargeHistory(GetChargeHistoryRequest request, CancellationToken cancellationToken)
+    public async Task<IActionResult> ChargeHistory(GetChargeHistoryRequest request, CancellationToken cancellationToken)
     {
         GetChargeHistoryResponse? response = await _mediator.Send(request, cancellationToken);
 

@@ -2,7 +2,7 @@
 
 namespace API.Zaptec.Features.GetChargerById;
 
-internal class GetChargerByIdHandler
+internal sealed class GetChargerByIdHandler
 {
     private readonly ILogger<GetChargersHandler> _logger;
     private readonly IZaptecHttpClientFactory _zaptecHttpClientFactory;

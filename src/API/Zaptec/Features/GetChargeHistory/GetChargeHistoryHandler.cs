@@ -4,7 +4,7 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace API.Zaptec.Features.GetChargeHistory;
 
-internal class GetChargeHistoryHandler
+internal sealed class GetChargeHistoryHandler
 {
     private readonly ILogger<GetChargersHandler> _logger;
     private readonly IZaptecHttpClientFactory _zaptecHttpClientFactory;

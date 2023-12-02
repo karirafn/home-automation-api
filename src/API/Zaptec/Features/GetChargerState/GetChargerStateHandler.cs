@@ -2,7 +2,7 @@
 
 namespace API.Zaptec.Features.GetChargerState;
 
-internal class GetChargerStateHandler
+internal sealed class GetChargerStateHandler
 {
 
     private readonly ILogger<GetChargersHandler> _logger;

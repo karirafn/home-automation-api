@@ -8,9 +8,9 @@ namespace API.Zaptec.Features.GetCost;
 internal sealed class GetChargeHistoryCostHandler
 {
     private readonly GetChargeHistoryHandler _getChargeHistoryHandler;
-    private readonly IOptions<ElectricityRateOptions> _options;
+    private readonly IOptions<RateOptions> _options;
 
-    public GetChargeHistoryCostHandler(GetChargeHistoryHandler getChargeHistoryHandler, IOptions<ElectricityRateOptions> options)
+    public GetChargeHistoryCostHandler(GetChargeHistoryHandler getChargeHistoryHandler, IOptions<RateOptions> options)
     {
         _getChargeHistoryHandler = getChargeHistoryHandler;
         _options = options;
@@ -25,6 +25,6 @@ internal sealed class GetChargeHistoryCostHandler
             Start: x.StartDateTime,
             End: x.EndDateTime,
             Energy: x.Energy,
-            Cost: x.Energy * _options.Value.Total));
+            Cost: x.Energy * _options.Value.Electricity));
     }
 }

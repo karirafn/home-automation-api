@@ -4,9 +4,9 @@ internal static class DependencyInjection
 {
     public static IServiceCollection AddSharedKernel(this IServiceCollection services)
     {
-        services.AddOptions<ElectricityRateOptions>()
+        services.AddOptions<RateOptions>()
             .Configure<IConfiguration>((settings, configuration)
-                => configuration.GetSection(ElectricityRateOptions.SectionName).Bind(settings));
+                => configuration.GetSection(RateOptions.SectionName).Bind(settings));
 
         return services;
     }

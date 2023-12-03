@@ -1,6 +1,6 @@
 ﻿namespace API.Zaptec.Features.GetChargeHistory;
 
-public sealed record ChargeData(
+public sealed record class ChargeData(
     Guid Id,
     string DeviceId,
     DateTime StartDateTime,

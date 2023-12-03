@@ -1,4 +1,4 @@
-﻿namespace API.Zaptec.Features.GetChargeHistory;
+﻿namespace SharedKernel.DTO;
 
 public sealed record class ChargeData(
     Guid Id,

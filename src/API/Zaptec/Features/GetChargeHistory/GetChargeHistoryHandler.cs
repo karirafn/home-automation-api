@@ -2,6 +2,8 @@
 
 using Microsoft.Extensions.Caching.Memory;
 
+using SharedKernel.DTO;
+
 namespace API.Zaptec.Features.GetChargeHistory;
 
 internal sealed class GetChargeHistoryHandler

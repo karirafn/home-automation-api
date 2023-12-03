@@ -1,4 +1,4 @@
-﻿namespace API.Zaptec.Features.GetChargerById;
+﻿namespace SharedKernel.DTO;
 
 public sealed record class GetChargerByIdResponse(
     int OperationMode,

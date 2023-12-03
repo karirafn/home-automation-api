@@ -3,6 +3,8 @@ using API.Zaptec.Features.GetChargeHistory;
 
 using Microsoft.Extensions.Options;
 
+using SharedKernel.DTO;
+
 namespace API.Zaptec.Features.GetCost;
 
 internal sealed class GetChargeHistoryCostHandler

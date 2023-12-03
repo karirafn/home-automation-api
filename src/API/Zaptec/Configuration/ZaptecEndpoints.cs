@@ -7,6 +7,8 @@ using API.Zaptec.Features.GethargeHistoryCostSummary;
 
 using Microsoft.AspNetCore.Mvc;
 
+using SharedKernel.DTO;
+
 namespace API.Zaptec.Configuration;
 
 internal static class ZaptecEndpoints

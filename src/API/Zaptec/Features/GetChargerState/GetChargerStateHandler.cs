@@ -1,5 +1,7 @@
 ﻿using API.Zaptec.Features.GetChargers;
 
+using SharedKernel.DTO;
+
 namespace API.Zaptec.Features.GetChargerState;
 
 internal sealed class GetChargerStateHandler

@@ -1,3 +1,3 @@
-﻿namespace API.Zaptec.Features.GetChargeHistory;
+﻿namespace SharedKernel.DTO;
 
 public sealed record class GetChargeHistoryResponse(int Pages, IReadOnlyCollection<ChargeData> Data);

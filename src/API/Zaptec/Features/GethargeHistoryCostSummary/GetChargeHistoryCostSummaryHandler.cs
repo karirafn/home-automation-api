@@ -1,5 +1,7 @@
 ﻿using API.Zaptec.Features.GetCost;
 
+using SharedKernel.DTO;
+
 namespace API.Zaptec.Features.GethargeHistoryCostSummary;
 
 internal sealed class GetChargeHistoryCostSummaryHandler

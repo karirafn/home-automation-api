@@ -1,4 +1,6 @@
-﻿namespace API.Zaptec.Features.GetChargers;
+﻿using SharedKernel.DTO;
+
+namespace API.Zaptec.Features.GetChargers;
 
 internal sealed class GetChargersHandler
 {

@@ -1,4 +1,4 @@
-﻿namespace API.Zaptec.Features.GetChargers;
+﻿namespace SharedKernel.DTO;
 
 public sealed record class Charger(
     int OperatingMode,

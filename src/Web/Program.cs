@@ -1,6 +1,14 @@
-using Web.Components;
+﻿using Web.Components;
+using Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<IZaptecService, ZaptecService>();
+
+builder.Services.AddHttpClient<IZaptecService, ZaptecService>(client =>
+{
+    client.BaseAddress = new("https://localhost:7226");
+});
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -22,6 +30,6 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+   .AddInteractiveServerRenderMode();
 
 app.Run();
